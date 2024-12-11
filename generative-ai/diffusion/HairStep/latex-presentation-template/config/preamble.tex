@@ -1,0 +1,35 @@
+% -------------------------------
+% Package Imports
+% -------------------------------
+\usepackage{graphicx}    % For including graphics
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}     % For math symbols and environments
+\usepackage{amssymb}     % For additional math symbols
+\usepackage{amsfonts}    % For math fonts
+\usepackage{amsthm}      % For theorem environments
+
+% -------------------------------
+% Color and Theme Customization
+% -------------------------------
+\definecolor{myBlue}{RGB}{0,33,71}
+\usecolortheme[named=myBlue]{structure}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% -------------------------------
+% Custom Dimensions
+% -------------------------------
+\newlength{\textmargin}
+\setlength{\textmargin}{10mm} 
+\setbeamersize{text margin left=\textmargin, text margin right=\textmargin}
+
+\newlength{\titlehmargin}
+\setlength{\titlehmargin}{5mm} 
+
+\newlength{\titlevmargin}
+\setlength{\titlevmargin}{1mm} 
+
+\newlength{\fullpagewidth}
+\setlength{\fullpagewidth}{\dimexpr\textwidth + 2\textmargin\relax}
