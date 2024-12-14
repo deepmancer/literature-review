@@ -306,3 +306,8 @@ TSWLatexianTemp*
 #*Notes.bib
 generative-ai/diffusion/HairStep/assets/original-paper/**
 generative-ai/diffusion/HairStep/HairStep.code-workspace
+
+
+# Drawio files
+
+*.drawio
