@@ -1,0 +1,15 @@
+\newcommand{\newSection}[1]{
+    \newpage
+    \usebackgroundtemplate{
+        \includegraphics[width=\paperwidth]{assets/presentation-theme/slide-new-chapter.png}
+    }
+    \begin{frame}[plain]
+        \vspace{0.6cm}
+        \vfill
+        \raggedright
+        \textcolor{white}{\Huge{#1}}
+        \vfill
+    \end{frame}
+    \usebackgroundtemplate{}
+    \section{#1}
+}
