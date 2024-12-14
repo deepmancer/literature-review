@@ -1,23 +1,17 @@
 \documentclass[smaller, aspectratio=169]{beamer}
-% Load modular components
 
-
-
-\useoutertheme{infolines} 
-
-\usepackage[
-    backend=biber,
-    style=ieee,
-]{biblatex}
-\addbibresource{references.bib}
-
-
+% Packages
 \input{config/preamble}
 \input{config/frame-settings}
+\input{config/commands.tex}
+
+\input{config/variables.tex}
+
 \input{slides/titlepage}
 
+
 % Metadata
-\newcommand{\paperTitle}{HairStep: Transfer Synthetic to Real Using Strand and Depth Maps for Single-View 3D Hair Modelin}
+\newcommand{\paperTitle}{HairStep: Transfer Synthetic to Real Using Strand and Depth Maps for Single-View 3D Hair Modeling}
 \newcommand{\paperAuthors}{Y. Zheng, Z. Jin, M. Li, H. Huang, C. Ma, S. Cui, and X. Han}
 \newcommand{\paperAuthorsAffiliation}{CUHKSZ, Kuaishou Technology}
 \newcommand{\paperPublishedYear}{2023}
@@ -42,45 +36,27 @@
     \titlepage
 \end{frame}
 
+
+% Outline frame
+\include{slides/contents}
+
 % Main Content
 % -------------------------------
 % Slide Content
 % -------------------------------
 \include{slides/task-intro}
 
+\include{slides/related-works}
 
-\begin{frame}{Make Titles Informative}
-  \begin{itemize}
-      \item Use \texttt{itemize} a lot.
-      \item Use very short sentences or short phrases.
-  \end{itemize}
-  You can create overlays:
-  \begin{itemize}
-      \item Using the \texttt{pause} command:
-      \begin{itemize}
-          \item First item.
-          \pause
-          \item Second item.
-      \end{itemize}
-      \item Using overlay specifications:
-      \begin{itemize}
-          \item<3-> First item.
-          \item<4-> Second item.
-      \end{itemize}
-      \item Using the general \texttt{uncover} command:
-      \begin{itemize}
-          \uncover<5->{\item First item.}
-          \uncover<6->{\item Second item.}
-      \end{itemize}
-  \end{itemize}
-\end{frame}
+\include{slides/motivation}
+
+\include{slides/contribution}
+
+\include{slides/method}
+
+\include{slides/experiments}
 
 
-% References
-\begin{frame}[t]{References}
-    \nocite{*}
-    \small
-    \printbibliography
-\end{frame}
+\include{slides/reference}
 
 \end{document}
