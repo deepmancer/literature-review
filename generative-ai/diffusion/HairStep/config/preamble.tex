@@ -1,13 +1,31 @@
+
+% -------------------------------
+% Outer Theme Configuration
+\useoutertheme{infolines} 
+
 % -------------------------------
 % Package Imports
 % -------------------------------
 \usepackage{graphicx}    % For including graphics
+\usepackage{xcolor}
+\usepackage{tikz}
+
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{amsmath}     % For math symbols and environments
 \usepackage{amssymb}     % For additional math symbols
 \usepackage{amsfonts}    % For math fonts
 \usepackage{amsthm}      % For theorem environments
+\usepackage{caption}     % Caption customization
+\usepackage{bookmark}             % PDF bookmarks
+\usepackage{cleveref}             % Clever referencing for improved cross-references
+
+\usepackage[
+    backend=biber,
+    style=ieee,
+]{biblatex}
+\addbibresource{references.bib}
+\usepackage{hyperref}    % For hyperlinks
 
 % -------------------------------
 % Color and Theme Customization
@@ -33,3 +51,21 @@
 
 \newlength{\fullpagewidth}
 \setlength{\fullpagewidth}{\dimexpr\textwidth + 2\textmargin\relax}
+
+% -------------------------------
+% Hyperlink Settings
+% -------------------------------
+\hypersetup{
+    bookmarks=true,
+    colorlinks=true, 
+    linkcolor=myBlue, 
+    citecolor=myBlue, 
+    filecolor=myBlue, 
+    urlcolor=myBlue,  
+    pdfborder={0 0 0}
+}
+
+% ---- Caption Colors ----
+\captionsetup[figure]{labelformat=empty} % Set figure caption label color
+\captionsetup[table]{labelfont={color=myBlue}}  % Set table caption label color
+
