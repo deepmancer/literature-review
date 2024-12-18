@@ -77,5 +77,15 @@
 }
 
 % ---- Caption Colors ----
-\captionsetup[figure]{labelformat=empty} % Set figure caption label color
-\captionsetup[table]{labelformat=empty}  % Set table caption label color
+% ---- Caption Font Size ----
+\captionsetup[figure]{
+    labelformat=empty,    % Remove "Figure" label
+    font={footnotesize},         % Set font size to 10pt (small)
+    skip=5pt              % Add spacing between caption and figure
+}
+
+\captionsetup[table]{
+    labelformat=empty,    % Remove "Table" label
+    font={footnotesize},         % Set font size to 10pt (small)
+    skip=5pt              % Add spacing between caption and table
+}
